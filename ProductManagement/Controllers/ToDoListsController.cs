@@ -40,5 +40,41 @@ namespace ProductManagement.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    public ActionResult Details(int id)
+    {
+      ToDoList thisToDoList = _db.ToDoLists.FirstOrDefault(todolists => todolists.ToDoListId == id);
+      return View(thisToDoList);
+    }
+
+    public ActionResult Edit(int id)
+    {
+      var thisToDoList = _db.ToDoLists.FirstOrDefault(todolists => todolists.ToDoListId == id);
+      ViewBag.ProductId = new SelectList(_db.Products, "ProductId", "ProductName");
+      return View(thisToDoList);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(ToDoList todolist)
+    {
+      _db.Entry(todolist).State = EntityState.Modified;
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    public ActionResult Delete(int id)
+    {
+      var thisToDoList = _db.ToDoLists.FirstOrDefault(todolists => todolists.ToDolistId == id);
+      return View(thisToDoList);
+    }
+
+    [HttpPost,ActionName("Delete")]
+    public ActionResult DeleteConfirmed(int id)
+    {
+      var thisToDoList = _db.ToDoLists.FirstOrDefault(todolists => todolists.ToDoListId == id);
+      _db.ToDoLists.Remove(thisToDoList);
+      _db.SaveChangeS();
+      return RedirectToAction("Index");
+    }
   }
 }
