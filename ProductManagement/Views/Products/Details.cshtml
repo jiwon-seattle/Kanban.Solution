@@ -1,0 +1,42 @@
+@{
+  Layout = "_Layout";
+}
+
+@model ProductManagement.Models.Product;
+
+<div class="productDetails">
+  <h1><strong>Product Details</strong></h1>
+
+  <h3>@Html.DisplayNameFor(model=>model.Name): @Html.DisplayFor(model => model.Name)</h3>
+
+  <hr>
+  @if(@Model.ToDoLists.Count == 0)
+  {
+    <h3>There are no To Do assigned yet.</h3>
+  }
+  else
+  {
+    <h2>To-Dos: </h2>
+    @foreach(TodoList todoList in Model.ToDoLists)
+    {
+      <h3>@todoList.Name</h3>
+    }
+  }
+  <hr>
+  @if(Model.Managers.Count == 0)
+  {
+    <h3>There are no peole assinged on this product yet.</h3>
+  }
+  else
+  {
+    <h2>People who are working on this product:</h2>
+    @foreach(var join in Model.Managers)
+    {
+      <h3>@join.Manager.Name</h3>
+    }
+  }
+  
+  <p>@Html.ActionLink("Back to product list", "Index")</p>
+  <p>@Html.ActionLink("Edit Product", "Edit", new { id = Model.ProductId })</p>
+  <p>@Html.ActionLink("Delete Product", "Delete", new { id = Model.ProductId })</p>
+</div>
