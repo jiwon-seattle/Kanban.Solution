@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@model ProductManagement.Models.ToDoList;
+
+<div class="todolistCreate">
+
+  <h1><strong>Add a new To Do</strong></h1>
+
+  @using (Html.BeginForm())
+  {
+    @Html.Label("To Do Name")
+    @Html.TextBoxFor(model => model.Name)
+
+    @Html.LabelFor(model => model.Product)
+    @Html.DropDownList("ProductId")
+
+    <input type="submit" value="Add new To Do">
+  }
+
+  <p>@Html.ActionLink("Show To Do list", "Index")</p>
+
+</div>

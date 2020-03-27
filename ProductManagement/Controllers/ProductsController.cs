@@ -43,7 +43,7 @@ namespace ProductManagement.Controllers
     public ActionResult Details(int id)
     {
       var thisProduct = _db.Products
-          .Include(product => product.ToDoLists)
+          .Include(product => product.ToDoLists) //keep an eye on this;
           .Include(product => product.Managers)
           .ThenInclude(join => join.Manager)
           .FirstOrDefault(product => product.ProductId == id);
