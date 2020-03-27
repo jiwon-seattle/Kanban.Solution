@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+
+@model ProductManagement.Models.Product
+
+<div class="productEdit">
+
+  <h1><strong>Edit this product</strong></h1>
+
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.ProductId)
+
+    @Html.Label("Product Name")
+    @Html.EditorFor(model => model.Name)
+
+    <input type="submit" value="Save">
+  }
+
+  <p>@Html.ActionLink("Back to product list", "Index")</p>
+</div>

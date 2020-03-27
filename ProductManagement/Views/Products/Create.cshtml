@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+
+@model ProductManagement.Models.Product;
+
+<div class="productCreate">
+  <h1><strong>Add a new product</strong></h1>
+
+  @using (Html.BeginForm())
+  {
+    @Html.Label("Product Name")
+    @Html.TextBoxFor(model => model.Name)
+    
+    <input type="submit" value="Add new product">
+  }
+</div>
