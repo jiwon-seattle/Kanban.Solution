@@ -10,7 +10,7 @@ namespace ProductManagement.Models
     public string Content {get; set;}
     public DateTime KickOffDate {get; set;}
     public DateTime ReleaseDate {get; set;}
-    public DateTime DueDate {get; set;} //desining due date
+    // public DateTime DueDate {get; set;} //desining due date
     public bool ActiveStatus {get; set;}
     public virtual ApplicationUser User {get; set;}
     public ICollection<ProductManager> Managers {get; set;}
