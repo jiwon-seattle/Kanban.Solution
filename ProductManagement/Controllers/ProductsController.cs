@@ -39,5 +39,44 @@ namespace ProductManagement.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    public ActionResult Details(int id)
+    {
+      var thisProduct = _db.Products
+          .Include(product => product.ToDoLists)
+          .Include(product => product.Managers)
+          .ThenInclude(join => join.Manager)
+          .FirstOrDefault(product => product.ProductId == id);
+      return View(thisProduct);
+    }
+
+    public ActionResult Edit(int id)
+    {
+      var thisProduct = _db.Products.FirstOrDefault(product => product.ProductId ==id);
+      return View(thisProduct);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Product product)
+    {
+      _db.Entry(product).State = EntityState.Modified;
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    public ActionResult Delete(int id)
+    {
+      var thisProduct = _db.Products.FirstOrDefault(product => product.ProductId == id);
+      return View(thisProduct);
+    }
+
+    [HttpPost, ActionName("Delete")]
+    public ActionResult DeleteConfirmed(int id)
+    {
+      var thisProduct = _db.Products.FirstOrDefault(product => product.ProductId == id);
+      _db.Products.Remove(thisProduct);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   } 
 }
