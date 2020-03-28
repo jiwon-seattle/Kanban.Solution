@@ -1,0 +1,34 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Kanban.Models.Manager
+
+<div class="managerDetails">
+  <h1><strong>Manager Details</strong></h1>
+
+  <hr>
+  <h3>@Html.DisplayNameFor(model=>model.Name) : @Html.DisplayFor(model => model.Name)</h3>
+
+  @if(@Model.Projects.Count == 0)
+  {
+    <h3>No projects has been assigned to this manager</h3>
+  }
+  else
+  {
+    <h3>@Html.DisplayFor(model => model.Name) manages projects:</h3>
+    @foreach(var join in Model.Projects)
+    {
+      <h3>@join.Project.ProjectName</h3>
+      @using (Html.BeginForm("Delete this project", "Projects"))
+      {
+        @Html.Hidden("joinId", @join.ProjectManagerId)
+        <input type="submit" value="Delete">
+      }
+    }
+  }
+
+  <p>@Html.ActionLink("Back to Manager List", "Index")</p>
+  <p>@Html.ActionLink("Edit Manager", "Edit", new {id =Model.ManagerId})</p>
+  <p>@Html.ActionLink("Delete Manager", "Delete", new {id =Model.ManagerId})</p>
+</div>

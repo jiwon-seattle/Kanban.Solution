@@ -1,9 +1,14 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using System.Threading.Tasks;
+using System.Security.Claims;
 using Kanban.Models;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 
 namespace Kanban.Controllers
 {
@@ -32,7 +37,7 @@ namespace Kanban.Controllers
     _db.Managers.Add(manager);
     if (ProjectId != 0)
     {
-      _db.ProjectManagers.Add(new ProjectManagers() { ProjectId = ProjectId, ManagerId = manager.ManagerId});
+      _db.ProjectManagers.Add(new ProjectManager() { ProjectId = ProjectId, ManagerId = manager.ManagerId});
     }
     _db.SaveChanges();
     return RedirectToAction("Index");
@@ -41,7 +46,7 @@ namespace Kanban.Controllers
     public ActionResult Details(int id)
     {
       var thisManager = _db.Managers
-          .Include(manager => manager.Projets)
+          .Include(manager => manager.Projects)
           .ThenInclude(join => join.Project)
           .FirstOrDefault(manager => manager.ManagerId == id);
       return View(thisManager);
@@ -59,16 +64,16 @@ namespace Kanban.Controllers
     {
       if (ProjectId != 0)
       {
-        _db.ProjectManagers.Add(new ProjectManagers() { ProjectId == ProjectId, ManagerId = manager.ManagerId})
+        _db.ProjectManagers.Add(new ProjectManager() { ProjectId = ProjectId, ManagerId = manager.ManagerId});
       }
-      _db.Entry(manager).State = Entity.Modified;
+      _db.Entry(manager).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
 
     public ActionResult AssignProject(int id)
     {
-      var thisManager = _db.Managers.FirstOrDefault(Manager => manager.ManagerId == id);
+      var thisManager = _db.Managers.FirstOrDefault(manager => manager.ManagerId == id);
       ViewBag.ProjectId = new SelectList(_db.Projects, "ProjectId", "ProjectName");
       return View(thisManager);
     }
@@ -78,7 +83,7 @@ namespace Kanban.Controllers
     {
       if (ProjectId != 0)
       {
-        _db.ProjectManagers.Add(new ProjectManagers() { ProjectId = ProjectId, ManagerId = manager.ManagerId});
+        _db.ProjectManagers.Add(new ProjectManager() { ProjectId = ProjectId, ManagerId = manager.ManagerId});
       }
       _db.SaveChanges();
       return RedirectToAction("Index");
@@ -86,7 +91,7 @@ namespace Kanban.Controllers
 
     public ActionResult Delete(int id)
     {
-      var thisManager = _db.Managers.FirstOrDefault(Manager => manager.ManagerId == id);
+      var thisManager = _db.Managers.FirstOrDefault(manager => manager.ManagerId == id);
       return View(thisManager);
     }
 

@@ -15,7 +15,7 @@ namespace Kanban.Models
           .AddJsonFile("appsettings.json")
           .Build();
 
-      var builder = new DbContextOptionsBuilder<ProductManagementContext>();
+      var builder = new DbContextOptionsBuilder<KanbanContext>();
       var connectionString = configuration.GetConnectionString("DefaultConnection");
 
       builder.UseMySql(connectionString);

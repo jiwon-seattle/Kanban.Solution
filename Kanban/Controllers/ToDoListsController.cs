@@ -5,32 +5,35 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
 using System.Security.Claims;
-using ProductManagement.Models;
+using Kanban.Models;
 using System.Collections.Generic;
-using System;
 using System.Linq;
+using System;
 
 namespace Kanban.Controllers
 {
   public class ToDoListsController : Controller
   {
-    private readonly ToDoListContext _db;
+    private readonly KanbanContext _db;
 
-    public ToDoListsController(ToDoListContext db)
+    public ToDoListsController(KanbanContext db)
     {
       _db = db;
     }
 
     public ActionResult Index()
     {
-      List<ToDoList> model = _db.ToDoLists.Include(todolists => todolists.Product && todolists => todolists.Status).ToList();
+      List<ToDoList> model = _db.ToDoLists
+      .Include(todolists => todolists.Project)
+      .Include( todolists => todolists.Status)
+      .ToList();
       return View(model);
     }
 
     public ActionResult Create()
     {
       ViewBag.ProjectId = new SelectList(_db.Projects, "ProjectId", "ProjectName");
-      ViewBag.StatusId = new SelectList(_db.Statuses, "StatusId", "Tracking")
+      ViewBag.StatusId = new SelectList(_db.Statuses, "StatusId", "Tracking");
       return View();
     }
 
@@ -66,7 +69,7 @@ namespace Kanban.Controllers
 
     public ActionResult Delete(int id)
     {
-      var thisToDoList = _db.ToDoLists.FirstOrDefault(todolists => todolists.ToDolistId == id);
+      var thisToDoList = _db.ToDoLists.FirstOrDefault(todolists => todolists.ToDoListId == id);
       return View(thisToDoList);
     }
 
@@ -75,7 +78,7 @@ namespace Kanban.Controllers
     {
       var thisToDoList = _db.ToDoLists.FirstOrDefault(todolists => todolists.ToDoListId == id);
       _db.ToDoLists.Remove(thisToDoList);
-      _db.SaveChangeS();
+      _db.SaveChanges();
       return RedirectToAction("Index");
     }
   }

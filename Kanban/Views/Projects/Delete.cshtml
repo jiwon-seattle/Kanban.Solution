@@ -7,11 +7,11 @@
 <div class="productDelete">
   <h1><strong>Delete this product?</strong></h1>
 
-  @Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(model => model.Name)
+  @Html.DisplayNameFor(model => model.ProjectName) : @Html.DisplayFor(model => model.ProjectName)
   @using (Html.BeginForm())
   {
     <input type="submit" value="Delete">
   }
 
-  @Html.ActionLink("Back to product list", "Index")
+  @Html.ActionLink("Back to project list", "Index")
 </div>

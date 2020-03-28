@@ -4,19 +4,19 @@
 
 @model Kanban.Models.Project
 
-<div class="productEdit">
+<div class="projectEdit">
 
-  <h1><strong>Edit this product</strong></h1>
+  <h1><strong>Edit this project</strong></h1>
 
   @using (Html.BeginForm())
   {
-    @Html.HiddenFor(model => model.ProductId)
+    @Html.HiddenFor(model => model.ProjectId)
 
-    @Html.Label("Product Name")
-    @Html.EditorFor(model => model.Name)
+    @Html.Label("Project Name")
+    @Html.EditorFor(model => model.ProjectName)
 
     <input type="submit" value="Save">
   }
 
-  <p>@Html.ActionLink("Back to product list", "Index")</p>
+  <p>@Html.ActionLink("Back to project list", "Index")</p>
 </div>

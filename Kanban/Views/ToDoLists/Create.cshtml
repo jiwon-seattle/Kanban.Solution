@@ -13,8 +13,11 @@
     @Html.Label("To Do Name")
     @Html.TextBoxFor(model => model.Name)
 
-    @Html.LabelFor(model => model.Product)
-    @Html.DropDownList("ProductId")
+    @Html.Label("Assign this To Do to Project")
+    @Html.DropDownList("ProjectId")
+
+    @Html.Label("Status of this To Do")
+    @Html.DropDownList("StatusId")
 
     <input type="submit" value="Add new To Do">
   }

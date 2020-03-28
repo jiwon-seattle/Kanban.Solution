@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Kanban.Models.Manager
+
+<div class="managerAddProject">
+  <h1><strong>Add Project to this manager : @Html.DisplayFor(model => model.Name)</strong></h1>
+
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.ManagerId)
+
+    @Html.Label("Assign Project")
+    @Html.DropDownList("ProjectId")
+
+    <input type="submit" value="Save">
+  }
+</div>

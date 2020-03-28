@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Kanban.Models.Manager
+
+<div class="managerEdit">
+  <h1><strong>Edit Manager</strong></h1>
+
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.ManagerId)
+
+    @Html.Label("Manager Name")
+    @Html.EditorFor(model => model.Name)
+
+    @Html.Label("Change Project")
+    @Html.DropDownList("ProjectId")
+
+    <input type="submit" value="Save">
+  }
+</div>

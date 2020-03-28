@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Kanban.Models.Manager
+
+<div class="managerCreate">
+  <h1><strong>Add a new manager</strong></h1>
+
+  @using (Html.BeginForm())
+  {
+    @Html.Label("Manager Name")
+    @Html.TextBoxFor(model => model.Name)
+
+    @Html.Label("Assign this manager to a project")
+    @Html.DropDownList("ProjectId")
+
+    <input type="submit" value="Add new manager">
+  }
+</div>

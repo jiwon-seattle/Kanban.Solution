@@ -5,10 +5,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
 using System.Security.Claims;
-using DoctorOffice.Models;
+using Kanban.Models;
 using System.Collections.Generic;
-using System;
 using System.Linq;
+using System;
 
 namespace Kanban.Controllers
 {
@@ -23,7 +23,7 @@ namespace Kanban.Controllers
 
     public ActionResult Index()
     {
-      List<Projects> model = _db.Projects.ToList();
+      List<Project> model = _db.Projects.ToList();
       return View(model);
     }
     
@@ -43,7 +43,7 @@ namespace Kanban.Controllers
     public ActionResult Details(int id)
     {
       var thisProject = _db.Projects
-          .Include(project => project.ToDoLists) //keep an eye on this;
+          // .Include(project => project.ToDoLists) //keep an eye on this;
           .Include(project => project.Managers)
           .ThenInclude(join => join.Manager)
           .FirstOrDefault(project => project.ProjectId == id);

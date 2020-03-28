@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Kanban.Models.ToDoList
+
+<div class="todolistEdit">
+  <h1><strong>Edit To Do</strong></h1>
+
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor( model => model.ToDoListId)
+
+    @Html.Label("To Do")
+    @Html.EditorFor(model => model.Name)
+
+    @Html.Label("Assign to Project")
+    @Html.DropDownList("ProjectId")
+    
+    @Html.Label("Change the Status")
+    @Html.DropDownList("StatusId")
+
+    <input type="submit" value="Save">
+  }
+
+  <p>@Html.ActionLink("Back to To DO List", "Index")</p>
+</div>

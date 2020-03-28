@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Kanban.Models
 {
-  public class KanbanContext : IdentityDbContext<ApplicationUser>
+  public class KanbanContext : DbContext
   {
     public virtual DbSet<Project> Projects { get; set; }
     public DbSet<Manager> Managers { get; set; }

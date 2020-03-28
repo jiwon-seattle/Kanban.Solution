@@ -4,13 +4,13 @@
 
 @model Kanban.Models.Project
 
-<div class="productCreate">
+<div class="projectCreate">
   <h1><strong>Add a new product</strong></h1>
 
   @using (Html.BeginForm())
   {
-    @Html.Label("Product Name")
-    @Html.TextBoxFor(model => model.Name)
+    @Html.Label("Project Name")
+    @Html.TextBoxFor(model => model.ProjectName)
     
     <input type="submit" value="Add new product">
   }

@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Kanban.Models.ToDoList
+
+<div class="todolistDelete">
+
+  <h1><strong>Delete this To Do?</strong></h1>
+
+  @Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(model => model.Name)
+
+  @using (Html.BeginForm())
+  {
+    <input type="submit" value="Delete">
+  }
+  <p>@Html.ActionLink("Back to To Do List", "Index")</p>
+</div>

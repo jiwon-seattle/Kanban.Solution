@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Kanban.Models.ToDoList
+
+<div class="todolistDetails">
+
+  <h1><strong>To Do Details</strong></h1>
+  <hr>
+  <h3>@Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(model => model.Name)</h3>
+
+  <p>@Html.ActionLink("Back to To Do List", "Index")</p>
+  <p>@Html.ActionLink("Edit To Do", "Edit", new { id = Model.ToDoListId })</p>
+  <p>@Html.ActionLink("Delete To Do", "Delete", new { id = Model.ToDoListId })</p>
+</div>

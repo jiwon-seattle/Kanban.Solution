@@ -2,12 +2,13 @@
   Layout = "_Layout";
 }
 
+@using Kanban.Models;
 @model Kanban.Models.Project
 
-<div class="productDetails">
-  <h1><strong>Product Details</strong></h1>
+<div class="projectDetails">
+  <h1><strong>Project Details</strong></h1>
 
-  <h3>@Html.DisplayNameFor(model=>model.Name): @Html.DisplayFor(model => model.Name)</h3>
+  <h3>@Html.DisplayNameFor(model=>model.ProjectName): @Html.DisplayFor(model => model.ProjectName)</h3>
 
   <hr>
   @if(@Model.ToDoLists.Count == 0)
@@ -17,7 +18,7 @@
   else
   {
     <h2>To-Dos: </h2>
-    @foreach(TodoList todoList in Model.ToDoLists)
+    @foreach(ToDoList todoList in Model.ToDoLists)
     {
       <h3>@todoList.Name</h3>
     }
@@ -37,6 +38,6 @@
   }
   
   <p>@Html.ActionLink("Back to product list", "Index")</p>
-  <p>@Html.ActionLink("Edit Product", "Edit", new { id = Model.ProductId })</p>
-  <p>@Html.ActionLink("Delete Product", "Delete", new { id = Model.ProductId })</p>
+  <p>@Html.ActionLink("Edit Product", "Edit", new { id = Model.ProjectId })</p>
+  <p>@Html.ActionLink("Delete Product", "Delete", new { id = Model.ProjectId })</p>
 </div>

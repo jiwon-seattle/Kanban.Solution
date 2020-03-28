@@ -15,7 +15,7 @@
 
   @foreach (ToDoList todolist in Model)
   {
-    <h3>@Html.ActionLink($"{todolist.Name}", "Details", new { id = todolist.ToDoListId }) | @todolist.Project.ProjecttName </h3>
+    <h3>@Html.ActionLink($"{todolist.Name}", "Details", new { id = todolist.ToDoListId }) | @todolist.Project.ProjectName </h3>
   }
 
   <p>@Html.ActionLink("Add new To Do", "Create")</p>
