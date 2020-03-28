@@ -1,16 +1,17 @@
 using System;
 using System.Collections.Generic;
 
-namespace ProductManagement.Models
+namespace Kanban.Models
 {
   public class ToDoList
   {
     public int ToDoListId {get; set;}
-    public int ProductId {get; set;}
-    public virtual Product Product {get; set;}
+    public int ProjectId {get; set;}
+    public int StatusId {get; set;}
+    public virtual Project Project {get; set;}
+    public virtual Status Status {get; set;}
     public string Name {get; set;}
     public string Content {get; set;}
-    public DateTime DueDate {get; set;}
     public bool CheckCompletion {get; set;}
   }
 }

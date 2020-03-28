@@ -2,8 +2,8 @@
   Layout = "_Layout";
 }
 
-@using ProductManagement.Models;
-@model List<ProductManagement.Models.ToDoList>;
+@using Kanban.Models;
+@model List<Kanban.Models.ToDoList>;
 
 <div class="todolistIndex">
   <h1>To Dos</h1>
@@ -15,7 +15,7 @@
 
   @foreach (ToDoList todolist in Model)
   {
-    <h3>@Html.ActionLink($"{todolist.Name}", "Details", new { id = todolist.ToDoListId }) | @todolist.Product.ProductName </h3>
+    <h3>@Html.ActionLink($"{todolist.Name}", "Details", new { id = todolist.ToDoListId }) | @todolist.Project.ProjecttName </h3>
   }
 
   <p>@Html.ActionLink("Add new To Do", "Create")</p>

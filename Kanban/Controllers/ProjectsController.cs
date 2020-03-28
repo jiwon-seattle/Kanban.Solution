@@ -10,20 +10,20 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
-namespace ProductManagement.Controllers
+namespace Kanban.Controllers
 {
-  public class ProductsController : Controller
+  public class ProjectsController : Controller
   {
-    private readonly ProductManagementContext _db;
+    private readonly KanbanContext _db;
 
-    public ProductsController(ProductManagementContext db)
+    public ProjectsController(KanbanContext db)
     {
       _db = db;
     }
 
     public ActionResult Index()
     {
-      List<Product> model = _db.Products.ToList();
+      List<Projects> model = _db.Projects.ToList();
       return View(model);
     }
     
@@ -33,48 +33,48 @@ namespace ProductManagement.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create(Product product)
+    public ActionResult Create(Project project)
     {
-      _db.Products.Add(product);
+      _db.Projects.Add(project);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
 
     public ActionResult Details(int id)
     {
-      var thisProduct = _db.Products
-          .Include(product => product.ToDoLists) //keep an eye on this;
-          .Include(product => product.Managers)
+      var thisProject = _db.Projects
+          .Include(project => project.ToDoLists) //keep an eye on this;
+          .Include(project => project.Managers)
           .ThenInclude(join => join.Manager)
-          .FirstOrDefault(product => product.ProductId == id);
-      return View(thisProduct);
+          .FirstOrDefault(project => project.ProjectId == id);
+      return View(thisProject);
     }
 
     public ActionResult Edit(int id)
     {
-      var thisProduct = _db.Products.FirstOrDefault(product => product.ProductId ==id);
-      return View(thisProduct);
+      var thisProject = _db.Projects.FirstOrDefault(project => project.ProjectId ==id);
+      return View(thisProject);
     }
 
     [HttpPost]
-    public ActionResult Edit(Product product)
+    public ActionResult Edit(Project project)
     {
-      _db.Entry(product).State = EntityState.Modified;
+      _db.Entry(project).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
 
     public ActionResult Delete(int id)
     {
-      var thisProduct = _db.Products.FirstOrDefault(product => product.ProductId == id);
-      return View(thisProduct);
+      var thisProject = _db.Projects.FirstOrDefault(project => project.ProjectId == id);
+      return View(thisProject);
     }
 
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
-      var thisProduct = _db.Products.FirstOrDefault(product => product.ProductId == id);
-      _db.Products.Remove(thisProduct);
+      var thisProject = _db.Projects.FirstOrDefault(project => project.ProjectId == id);
+      _db.Projects.Remove(thisProject);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }

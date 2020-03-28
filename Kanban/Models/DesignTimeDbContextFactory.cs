@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 
-namespace ProductManagement.Models
+namespace Kanban.Models
 {
-  public class ProductManagementContextFactory : IDesignTimeDbContextFactory<ProductManagementContext>
+  public class KanbanContextFactory : IDesignTimeDbContextFactory<KanbanContext>
   {
 
-    ProductManagementContext IDesignTimeDbContextFactory<ProductManagementContext>.CreateDbContext(string[] args)
+    KanbanContext IDesignTimeDbContextFactory<KanbanContext>.CreateDbContext(string[] args)
     {
       IConfigurationRoot configuration = new ConfigurationBuilder()
           .SetBasePath(Directory.GetCurrentDirectory())
@@ -20,7 +20,7 @@ namespace ProductManagement.Models
 
       builder.UseMySql(connectionString);
 
-      return new DoctorOfficeContext(builder.Options);
+      return new KanbanContext(builder.Options);
     }
   }
 }

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace ProductManagement.Controllers
+namespace Kanban.Controllers
 {
   public class HomeController : Controller
   {

@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
-namespace ProductManagement.Controllers
+namespace Kanban.Controllers
 {
   public class ToDoListsController : Controller
   {
@@ -23,13 +23,14 @@ namespace ProductManagement.Controllers
 
     public ActionResult Index()
     {
-      List<ToDoList> model = _db.ToDoLists.Include(todolists => todolists.Product).ToList();
+      List<ToDoList> model = _db.ToDoLists.Include(todolists => todolists.Product && todolists => todolists.Status).ToList();
       return View(model);
     }
 
     public ActionResult Create()
     {
-      ViewBag.ProductId = new SelectList(_db.Products, "ProductId", "ProductName");
+      ViewBag.ProjectId = new SelectList(_db.Projects, "ProjectId", "ProjectName");
+      ViewBag.StatusId = new SelectList(_db.Statuses, "StatusId", "Tracking")
       return View();
     }
 
@@ -50,7 +51,8 @@ namespace ProductManagement.Controllers
     public ActionResult Edit(int id)
     {
       var thisToDoList = _db.ToDoLists.FirstOrDefault(todolists => todolists.ToDoListId == id);
-      ViewBag.ProductId = new SelectList(_db.Products, "ProductId", "ProductName");
+      ViewBag.ProjectId = new SelectList(_db.Projects, "ProjectId", "ProjectName");
+      ViewBag.StatusId = new SelectList(_db.Statuses, "StatusId", "Tracking");
       return View(thisToDoList);
     }
 

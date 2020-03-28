@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ProductManagement.Models;
+using Kanban.Models;
 
-namespace ProductManagement
+namespace Kanban
 {
   public class Startup
   {
@@ -25,7 +25,7 @@ namespace ProductManagement
       services.AddMvc();
 
       services.AddEntityFrameworkMySql()
-        .AddDbContext<ProductManagementContext>(options => options
+        .AddDbContext<KanbanContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
     }
 
