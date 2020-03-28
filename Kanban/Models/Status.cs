@@ -1,25 +1,29 @@
 using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 
 namespace Kanban.Models
 {
   public class Status
   {
-    public int StatusId {get; set;}
-    public Tracking Tracking {get;}
-    public virtual ICollection<ToDoList> ToDoLists {get; set;}
+   public int StatusId {get; set;}
+   public string StatusName {get; set;}
+   public virtual ICollection<ToDoList> ToDoLists {get; set;}
+
     public Status()
     {
       this.ToDoLists = new HashSet<ToDoList>();
     }
-  }
 
-  public class Tracking
-  {
-    public string Stories = "Stories";
-    public string ToDo = "To Do";
-    public string InProgress = "In Progress";
-    public string Testing = "Testing";
-    public string Done = "Done";
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Status>().HasData(
+          new Status {StatusId = 0, StatusName = "To-Do",},
+          new Status {StatusId = 1, StatusName = "In Progress",},
+          new Status {StatusId = 2, StatusName = "Testing",},
+          new Status {StatusId = 3, StatusName = "Done",}
+        );
+    }
+    
   }
 }
