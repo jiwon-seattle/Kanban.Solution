@@ -20,11 +20,10 @@
     @foreach(var join in Model.Projects)
     {
       <h3>@join.Project.ProjectName</h3>
-      @* <h3>@join.Project.ToDoLists.Name</h3> *@
 
       <h3>@Html.ActionLink($"{join.Project.ProjectName}", "Details", "Projects", new {id = join.Project.ProjectId })</h3>
 
-      @using (Html.BeginForm("Delete this project", "Projects"))
+      @using (Html.BeginForm("DeleteProject", "Managers"))
       {
         @Html.Hidden("joinId", @join.ProjectManagerId)
         <input type="submit" value="Delete">

@@ -1,7 +1,7 @@
 <div class="header">
 
-  <div id="headerImg" style="width:100px; text-align: center;"> 
-    <img src="~/img/kanbanheader.png" style="width: 30px; height: 20px;">
+  <div id="headerImg">
+  <a href='@Url.Action("Index", "Home")'><img src="~/img/kanbanheader.png" style="width: 30px; height: 20px;" /></a>
   </div>
   <p style="width: 100px; padding: 20px; border: 2px solid red;">@Html.ActionLink("Projects", "Index", "Projects")</p>
   <p style="width: 100px; padding: 20px; border: 2px solid red;">@Html.ActionLink("People", "Index", "Managers")</p>

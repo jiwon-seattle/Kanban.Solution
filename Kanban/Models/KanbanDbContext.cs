@@ -16,9 +16,9 @@ namespace Kanban.Models
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
       modelBuilder.Entity<Status>().HasData(
-        new Status {StatusId = 1, StatusName = "To-Do",},
-        new Status {StatusId = 2, StatusName = "In Progress",},
-        new Status {StatusId = 3, StatusName = "Testing",},
+        new Status {StatusId = 1, StatusName = "Idea",},
+        new Status {StatusId = 2, StatusName = "ToDo",},
+        new Status {StatusId = 3, StatusName = "Doing",},
         new Status {StatusId = 4, StatusName = "Done",}
         );
     }
