@@ -43,7 +43,7 @@ namespace Kanban.Controllers
     public ActionResult Details(int id)
     {
       var thisProject = _db.Projects
-          // .Include(project => project.ToDoLists) //keep an eye on this;
+          .Include(project => project.ToDoLists) //keep an eye on this;
           .Include(project => project.Managers)
           .ThenInclude(join => join.Manager)
           .FirstOrDefault(project => project.ProjectId == id);

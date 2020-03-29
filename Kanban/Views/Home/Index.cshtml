@@ -3,13 +3,47 @@
   ViewBag.Title = "Main Kanban";
 }
 
-<div class="KanbanIndex">
-  <h1><strong>Kanban</strong></h1>
-  <div id="KanbanGuideline">
-    <img src="~/img/doctor.png" style="width:300px;">
-    <h4>Welcome to Kanban!</h4>
-  </div>
+<div class="kanbanIndex">
+  <div id="kanbanGuideline">
+    <h1><strong>Welcome to Kanban!</h4></strong>
+    <div id="kanbanDescription">
+      <div id="descriptionHeader">
+        <p><strong>What is Kanban?</strong></p>
+      </div>
+      <div id="descriptionMain">
+        <div id="para1">
+          <p>
+            Kanban is the Japanese word for "cards" or "visual signs". Kanban draws on the Japanese philosophy of Kaizen, the idea that small and continuous changes result in a substantial improvement over time.
+          </p>
+        </div>
+        <div id="para2">
+          <p>
+             Kanban is a system of visualizing work and limiting work in progress to achieve higher levels of productivity. 
+             With Kanban board, your team understand where things stand and what needs to be done at any point of time.
+          </p>
+        </div>
+      </div> 
+    </div>
+
+    <div id="kanbanImage">
+      <img src="~/img/postit.png" style="width:800px;">
+    </div>   
+    
+    <div id="kanbanBoard">
+      <div id="kanbanBoardHeader">
+        <p><strong>What is a kanban board?</strong></p>
+      </div>
+      <div id="kanbanBoardMain">
+        <p>A Kanban board is the visual representation of your team's work. A kanban board consists of four columns: "To-Do", "In Progress", "Testing", and "Done". A Kanban card contains essential details about the work item, such as the name, desciption, status.</p>
+      </div>
+    </div>
+    <div id="kanbanImage2">
+      <img src="~/img/kanban.jpg" style="width:800px;">
+    </div>   
   <div id="KanbanLinks">
-    <p>@Html.ActionLink("Create an Account", "Index", "Account")</p>
+    @* <p>@Html.ActionLink("Create an Account", "Index", "Projects")</p> *@
   </div>
 </div>
+
+
+@* Each column on your Kanban board should include a work-in-progress limit. There's no rule of thumb for setting these limits, since it depends on each team's capacity and the nature of the work. A simple example of a work-in-progress limit could be, "Not having more than 3 Kanban cards in the 'Doing' column at any given time." *@

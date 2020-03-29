@@ -1,0 +1,126 @@
+.header
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid red;
+  position: absolute;
+  top: 0;
+  left:0;
+  width:100%;
+  height:50px;
+  background-color: #101010;
+  color: white;
+  font-size: 20px;
+}
+
+body
+{
+  margin: 50px;
+  padding: 10px;
+}
+
+.container
+{
+  border: 2px solid green;
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+
+.kanbanIndex
+{
+  border: 2px solid yellow;
+  width:1200px;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+#kanbanDescription
+{
+  border: 2px solid green;
+  padding: 20px;
+  height: 300px;
+  color: white;
+  background-color: #00B26D;
+}
+
+#descriptionHeader
+{
+  border: 2px solid red;
+  font-size: 30px;
+}
+
+#descriptionMain
+{
+  border: 2px solid red;
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  margin: 10px;
+  justify-content: space-evenly;
+}
+
+#para1
+{
+  padding: 40px;
+  font-size: 15px;
+  width:400px;
+}
+
+#para2
+{
+  padding: 40px;
+  width:400px;
+}
+
+#kanbanImage
+{
+  border: 2px solid green; 
+  justify-content: center; 
+  /* align-items: center; */
+  text-align: center;
+
+}
+#kanbanBoard
+{
+  border: 2px solid green; 
+  background-color: #f2f2f2;
+  border: 2px solid green;
+  padding: 20px;
+  height: 300px;
+}
+
+#kanbanBoardHeader
+{
+  border: 2px solid red;
+  font-size: 30px;
+}
+
+#kanbanBoardMain
+{
+  border: 2px solid red;
+  height: 200px;
+  margin: 10px;
+  padding: 30px;
+  text-align: center;
+}
+
+#kanbanImage2
+{
+  border: 2px solid green; 
+  justify-content: center; 
+  /* align-items: center; */
+  text-align: center;
+}
+
+div#footer {
+  position: fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:#CCC;
+  background:#101010;
+  padding:8px;
+  text-align: center;
+}
