@@ -27,8 +27,8 @@ Parking Lot/Improvement Opportunities:
 
 ### To run dev mode locally:
 ```bash
-  $ git clone https://github.com/jiwon-seattle/DoctorOffice.Solution.git
-  $ cd DoctorOffice.Solution/DoctorOffice
+  $ git clone https://github.com/jiwon-seattle/Kanban.Solution.git
+  $ cd Kanban
   $ dotnet add package Microsoft.EntityFrameworkCore -v 2.2.0
   $ dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0
   $ dotnet build
@@ -37,7 +37,7 @@ Parking Lot/Improvement Opportunities:
   # After successfull pkg installtion
   $ dotnet run
 ```
-Now, it will automatically open http://localhost:5000 and show you the Doctor's Office main page.
+Now, it will automatically open http://localhost:5000 and show you the Kanban main page.
 
 You might encounter a MySql database related errors on initial loading since this application needs a specific data route to fetch data.
 
