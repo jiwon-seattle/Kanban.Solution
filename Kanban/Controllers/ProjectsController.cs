@@ -78,5 +78,27 @@ namespace Kanban.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    public ActionResult AssignPeople(int id)
+    {
+
+      var thisProject = _db.Projects.FirstOrDefault(project => project.ProjectId == id);
+      ViewBag.ManagerId = new SelectList(_db.Managers, "ManagerId", "Name");
+      return View(thisProject);
+    }
+
+    [HttpPost]
+    public ActionResult AssignPeople(Project project, int ManagerId)
+    {
+      if (ManagerId != 0)
+      {
+        _db.ProjectManagers.Add(new ProjectManager() { ManagerId = ManagerId, ProjectId = project.ProjectId});
+      }
+      _db.SaveChanges();
+
+      return RedirectToAction("Details", new {id = project.ProjectId});
+    }
+
+    
   } 
 }

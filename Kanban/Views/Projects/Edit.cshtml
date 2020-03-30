@@ -13,9 +13,21 @@
     @Html.HiddenFor(model => model.ProjectId)
 
     @Html.Label("Project Name")
-    @Html.EditorFor(model => model.ProjectName)
+    @Html.EditorFor(model => model.ProjectName, new { htmlAttributes = new { @type="text", @class="form-control" } })
 
-    <input type="submit" value="Save">
+    @Html.Label("Description")
+    @Html.TextAreaFor(model => model.Content, new { @type="text", @class="form-control"})
+
+    @Html.Label("Kick Off Date")
+    @Html.TextBoxFor(model => model.KickOffDate, "{0:MM-dd-yyyy}", new { @class = "form-control"})
+
+    @Html.Label("Due Date")
+    @Html.TextBoxFor(model => model.DueDate, "{0:MM-dd-yyyy}", new { @class = "form-control"})
+    
+    @Html.Label("Is this Project Active?")
+    @Html.CheckBoxFor(model => model.ActiveStatus, new { htmlAttributes = new { @value=true, @class = "form-control" } })
+    <br>
+    <input type="submit" value="Save" class="w3-button w3-green w3-round-large">
   }
 
   <p>@Html.ActionLink("Back to project list", "Index")</p>

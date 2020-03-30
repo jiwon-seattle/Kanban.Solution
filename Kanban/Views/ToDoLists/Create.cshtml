@@ -6,22 +6,31 @@
 
 <div class="todolistCreate">
 
-  <h1><strong>Add a new To Do</strong></h1>
+  <h1><strong>Add a new Task</strong></h1>
 
   @using (Html.BeginForm())
   {
-    @Html.Label("To Do Name")
-    @Html.TextBoxFor(model => model.Name)
+    <label asp-for="StatusId">Kanban Board</label>
+    <select asp-for="StatusId" asp-items="ViewBag.StatusId" class="form-control"></select>
+    
+    <label asp-for="Name">Work Item</label>
+    <input asp-for="Name" type="text" class="form-control">
 
-    @Html.Label("Assign this To Do to Project")
-    @Html.DropDownList("ProjectId")
+    <label asp-for="Content">Description</label>
+    <textarea asp-for="Content" type="text" class="form-control"></textarea>
 
-    @Html.Label("Status of this To Do")
-    @Html.DropDownList("StatusId")
+    <label asp-for="Priority">Priority</label>
+    <input asp-for="Priority" type="number" class="form-control">
 
-    <input type="submit" value="Add new To Do">
+    <label asp-for="CheckCompletion">Check if this work item is completed
+    </label>
+    <input asp-for="CheckCompletion" type="checkbox" value="false">
+
+    <hr>
+    <label asp-for="ProjectId">Assign this work item to project</label>
+    <select asp-for="ProjectId" asp-items="ViewBag.ProjectId"></select>
+    <br>
+    <input type="submit" value="Add new To Do" class="w3-button w3-green w3-round-large">
   }
-
-  <p>@Html.ActionLink("Show To Do list", "Index")</p>
 
 </div>

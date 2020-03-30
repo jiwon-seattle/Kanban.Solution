@@ -42,3 +42,5 @@ C:\Users\Jiwon Han\Desktop\Coding\c#-project\Kanban.Solution\Kanban\obj\Debug\ne
 C:\Users\Jiwon Han\Desktop\Coding\c#-project\Kanban.Solution\Kanban\obj\Debug\netcoreapp2.2\Kanban.csproj.CopyComplete
 C:\Users\Jiwon Han\Desktop\Coding\c#-project\Kanban.Solution\Kanban\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Footer.cshtml.g.cs
 C:\Users\Jiwon Han\Desktop\Coding\c#-project\Kanban.Solution\Kanban\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Header.cshtml.g.cs
+C:\Users\Jiwon Han\Desktop\Coding\c#-project\Kanban.Solution\Kanban\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Jiwon Han\Desktop\Coding\c#-project\Kanban.Solution\Kanban\obj\Debug\netcoreapp2.2\Razor\Views\Projects\AssignPeople.cshtml.g.cs

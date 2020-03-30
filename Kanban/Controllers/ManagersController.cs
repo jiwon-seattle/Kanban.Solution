@@ -71,7 +71,7 @@ namespace Kanban.Controllers
       return RedirectToAction("Index");
     }
 
-    public ActionResult AssignProject(int id)
+    public ActionResult AddProject(int id)
     {
       var thisManager = _db.Managers.FirstOrDefault(manager => manager.ManagerId == id);
       ViewBag.ProjectId = new SelectList(_db.Projects, "ProjectId", "ProjectName");
@@ -79,7 +79,7 @@ namespace Kanban.Controllers
     }
 
     [HttpPost]
-    public ActionResult AssignProject(Manager manager, int ProjectId)
+    public ActionResult AddProject(Manager manager, int ProjectId)
     {
       if (ProjectId != 0)
       {

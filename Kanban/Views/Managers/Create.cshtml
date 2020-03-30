@@ -5,16 +5,32 @@
 @model Kanban.Models.Manager
 
 <div class="managerCreate">
-  <h1><strong>Add a new manager</strong></h1>
-
+  <h1><strong>Add a new crew</strong></h1>
+  <hr>
   @using (Html.BeginForm())
   {
-    @Html.Label("Manager Name")
-    @Html.TextBoxFor(model => model.Name)
 
+    <label asp-for="Name">Crew Name</label>
+    <input asp-for="Name" type="text" class="form-control">
+
+    <label asp-for="ContactInfo">Contact</label>
+    <input asp-for="ContactInfo" type="text" class="form-control" maxlength="10"> 
+
+    <label asp-for="Position">Position</label>
+    <input asp-for="Position" type="text" class="form-control">
+
+    <label asp-for="RegisteredDate">Due Date</label>
+    <input asp-for="RegisteredDate" type="date" class="form-control">
+
+    <label asp-for="CurrentStatus">Is this crew Active?</label>
+    <input asp-for="CurrentStatus" type="checkbox" value="true">
+
+    @* <label asp-for="ProjectId">Assign</label>
+    <select id="ProjectId" asp-items="ViewBag.ProjectId" class="form-control"></select> *@
+    <br>
     @Html.Label("Assign this manager to a project")
     @Html.DropDownList("ProjectId")
-
-    <input type="submit" value="Add new manager">
+    <hr>
+    <input type="submit" value="Add new manager" class="w3-button w3-green w3-round-large">
   }
 </div>

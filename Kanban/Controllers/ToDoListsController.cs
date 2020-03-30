@@ -55,7 +55,7 @@ namespace Kanban.Controllers
     {
       var thisToDoList = _db.ToDoLists.FirstOrDefault(todolists => todolists.ToDoListId == id);
       ViewBag.ProjectId = new SelectList(_db.Projects, "ProjectId", "ProjectName");
-      ViewBag.StatusId = new SelectList(_db.Statuses, "StatusId", "Tracking");
+      ViewBag.StatusId = new SelectList(_db.Statuses, "StatusId", "StatusName");
       return View(thisToDoList);
     }
 

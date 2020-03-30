@@ -5,18 +5,30 @@
 @model Kanban.Models.Manager
 
 <div class="managerEdit">
-  <h1><strong>Edit Manager</strong></h1>
-
+  <h1><strong>Edit Crew</strong></h1>
+  <hr>
   @using (Html.BeginForm())
   {
     @Html.HiddenFor(model => model.ManagerId)
 
-    @Html.Label("Manager Name")
-    @Html.EditorFor(model => model.Name)
+    @Html.Label("Crew Name")
+    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @type="text", @class="form-control" } })
 
+    @Html.Label("Contact")
+    @Html.EditorFor(model => model.ContactInfo, new { htmlAttributes = new { @type="text", @class="form-control" } })
+
+    @Html.Label("Position")
+    @Html.EditorFor(model => model.Position, new { htmlAttributes = new { @type="text", @class="form-control" } })
+
+    @Html.Label("Registered Date")
+    @Html.TextBoxFor(model => model.RegisteredDate, "{0:MM-dd-yyyy}", new { @class = "form-control"})
+
+    @Html.Label("Is this crew Active?")
+    @Html.CheckBoxFor(model => model.CurrentStatus, new { htmlAttributes = new { @value=true, @class = "form-control" } })
+    <br>
     @Html.Label("Change Project")
     @Html.DropDownList("ProjectId")
-
-    <input type="submit" value="Save">
+    <hr>
+    <input type="submit" value="Save" class="w3-button w3-green w3-round-large">
   }
 </div>

@@ -5,12 +5,12 @@
 @model Kanban.Models.Project
 
 <div class="productDelete">
-  <h1><strong>Delete this product?</strong></h1>
+  <h1><strong>Delete this Project?</strong></h1>
 
   @Html.DisplayNameFor(model => model.ProjectName) : @Html.DisplayFor(model => model.ProjectName)
   @using (Html.BeginForm())
   {
-    <input type="submit" value="Delete">
+    <input type="submit" value="Delete" class="w3-button w3-green w3-round-large">
   }
 
   @Html.ActionLink("Back to project list", "Index")

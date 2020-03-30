@@ -7,37 +7,57 @@
 
 <div class="projectDetails">
   <h1><strong>Project Details</strong></h1>
-
-  <h3>@Html.DisplayNameFor(model=>model.ProjectName): @Html.DisplayFor(model => model.ProjectName)</h3>
-
+  
   <hr>
+  <h3>About Project @Html.DisplayFor(model => model.ProjectName)</h3>
+  <p>Project Name: @Model.ProjectName</p>
+  <p>Description: @Model.Content</p>
+  <p>Kikc Off Date: @Model.KickOffDate.Month/@Model.KickOffDate.Day/@Model.KickOffDate.Year</p>
+  <p>Due Date: @Model.DueDate.Month/@Model.DueDate.Day/@Model.DueDate.Year</p>
+  <p>Project Active : 
+    @if (@Model.ActiveStatus == true)
+    {
+      <span class="checkmark">✔</span>
+    }
+    else 
+    {
+      <span class="wrongmark">✘</span>
+    }
+  </p>
+  <hr>
+  
   @if(@Model.ToDoLists.Count == 0)
   {
     <h3>There are no To Do assigned yet.</h3>
+    @Html.ActionLink("Add Tasks", "Create", "ToDoLists")
   }
   else
   {
-    <h2>To-Dos: </h2>
+    <h2>Work Items: </h2>
     @foreach(ToDoList todoList in Model.ToDoLists)
     {
-      <h3>@todoList.Name</h3>
+      <h3>@Html.ActionLink(@todoList.Name, "Details", "ToDoLists", new { @class = "linkStyle", id = todoList.ToDoListId })</h3>
     }
+    @Html.ActionLink("Add Tasks", "Create", "ToDoLists")
   }
   <hr>
   @if(Model.Managers.Count == 0)
   {
     <h3>There are no peole assinged on this product yet.</h3>
+    @Html.ActionLink("Assign people to this project", "AssignPeople", new { id = Model.ProjectId})
   }
   else
   {
-    <h2>People who are working on this product:</h2>
+    <h2>Team Crews:</h2>
     @foreach(var join in Model.Managers)
     {
-      <h3>@join.Manager.Name</h3>
+      <h3>@Html.ActionLink(@join.Manager.Name, "Details", "Managers", new { @class = "linkStyle", id = @join.Manager.ManagerId })</h3>
     }
+    @Html.ActionLink("Assign people to this project", "AssignPeople", new { id = Model.ProjectId})
   }
   
-  <p>@Html.ActionLink("Back to product list", "Index")</p>
+  <hr>
+  
   <p>@Html.ActionLink("Edit Product", "Edit", new { id = Model.ProjectId })</p>
   <p>@Html.ActionLink("Delete Product", "Delete", new { id = Model.ProjectId })</p>
 </div>

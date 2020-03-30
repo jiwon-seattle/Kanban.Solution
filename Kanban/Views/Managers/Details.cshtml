@@ -5,21 +5,34 @@
 @model Kanban.Models.Manager
 
 <div class="managerDetails">
-  <h1><strong>Manager Details</strong></h1>
+  <h1><strong>Crew Details</strong></h1>
 
   <hr>
-  <h3>@Html.DisplayNameFor(model=>model.Name) : @Html.DisplayFor(model => model.Name)</h3>
-
+  <p>Crew Name: @Model.Name</p>
+  <p>Contact : @Model.ContactInfo</p>
+  <p>Position : @Model.Position</p>
+  <p>Registered Date: @Model.RegisteredDate.Month/@Model.RegisteredDate.Day/@Model.RegisteredDate.Year</p>
+  <p>Current Status : 
+    @if (@Model.CurrentStatus == true)
+    {
+      <span class="checkmark">✔</span>
+    }
+    else 
+    {
+      <span class="wrongmark">✘</span>
+    }
+  </p>
+  <hr>
   @if(@Model.Projects.Count == 0)
   {
     <h3>No projects has been assigned to this manager</h3>
+    //<p>@Html.ActionLink("Assign project", "")</p>
   }
   else
   {
     <h3>@Html.DisplayFor(model => model.Name) manages projects:</h3>
     @foreach(var join in Model.Projects)
     {
-      <h3>@join.Project.ProjectName</h3>
 
       <h3>@Html.ActionLink($"{join.Project.ProjectName}", "Details", "Projects", new {id = join.Project.ProjectId })</h3>
 
@@ -30,8 +43,7 @@
       }
     }
   }
-
-  <p>@Html.ActionLink("Back to Manager List", "Index")</p>
+  <hr>
   <p>@Html.ActionLink("Edit Manager", "Edit", new {id =Model.ManagerId})</p>
   <p>@Html.ActionLink("Delete Manager", "Delete", new {id =Model.ManagerId})</p>
 </div>

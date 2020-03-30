@@ -6,13 +6,13 @@
 
 <div class="todolistDelete">
 
-  <h1><strong>Delete this To Do?</strong></h1>
+  <h1><strong>Delete this Task?</strong></h1>
 
   @Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(model => model.Name)
 
   @using (Html.BeginForm())
   {
-    <input type="submit" value="Delete">
+    <input type="submit" value="Delete" class="w3-button w3-green w3-round-large">
   }
   <p>@Html.ActionLink("Back to To Do List", "Index")</p>
 </div>

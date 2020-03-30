@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Kanban.Models.Project
+
+<div class="projectAssignPeople">
+  <h1><strong>Assign people to this project : @Html.DisplayFor(model => model.ProjectName)</strong></h1>
+
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.ProjectId)
+
+    @Html.Label("Assign People")
+    @Html.DropDownList("ManagerId")
+
+    <input type="submit" value="Save" class="w3-button w3-green w3-round-large">
+  }
+</div>

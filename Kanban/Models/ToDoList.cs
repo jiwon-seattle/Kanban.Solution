@@ -12,7 +12,7 @@ namespace Kanban.Models
     public virtual Status Status {get; set;}
     public string Name {get; set;}
     public string Content {get; set;}
-    public int priority {get; set;}
+    public int Priority {get; set;}
     public bool CheckCompletion {get; set;}
   }
 }

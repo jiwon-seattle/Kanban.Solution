@@ -5,22 +5,35 @@
 @model Kanban.Models.ToDoList
 
 <div class="todolistEdit">
-  <h1><strong>Edit To Do</strong></h1>
+  <h1><strong>Edit Task</strong></h1>
 
+  <hr>
   @using (Html.BeginForm())
   {
     @Html.HiddenFor( model => model.ToDoListId)
 
-    @Html.Label("To Do")
-    @Html.EditorFor(model => model.Name)
+    @* @Html.Label("Kanban Board")
+    @Html.DropDownList("StatusId", new { htmlAttributes = new { @class="form-control" } }) *@
 
-    @Html.Label("Assign to Project")
-    @Html.DropDownList("ProjectId")
-    
-    @Html.Label("Change the Status")
-    @Html.DropDownList("StatusId")
-
-    <input type="submit" value="Save">
+    <label asp-for="StatusId">Kanban Board</label>
+    <select asp-for="StatusId" asp-items="ViewBag.StatusId" class="form-control"></select>
+    <br>
+    @Html.Label("Work Item")
+    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @type="text", @class="form-control" } })
+    <br>
+    @Html.Label("Description")
+    @Html.TextAreaFor(model => model.Content, new { @type="text", @class="form-control" } )
+    <br>
+    @Html.Label("Priority")
+    @Html.EditorFor(model => model.Priority, new { htmlAttributes = new { @type="number", @class="form-control" } })
+    <br>
+    @Html.Label("Completed?")
+    @Html.CheckBoxFor(model => model.CheckCompletion, new { htmlAttributes = new { @value=false, @class = "form-control" } })
+    <br>
+    <label asp-for="ProjectId">Assign project</label>
+    <select asp-for="ProjectId" asp-items="ViewBag.ProjectId" class="form-control"></select>
+    <hr>
+    <input type="submit" value="Save" class="w3-button w3-green w3-round-large">
   }
 
   <p>@Html.ActionLink("Back to To DO List", "Index")</p>

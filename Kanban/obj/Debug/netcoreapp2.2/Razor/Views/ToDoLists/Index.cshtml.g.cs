@@ -13,12 +13,18 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#line 1 "C:\Users\Jiwon Han\Desktop\Coding\c#-project\Kanban.Solution\Kanban\Views\_ViewImports.cshtml"
+using Kanban;
+
+#line default
+#line hidden
 #line 5 "C:\Users\Jiwon Han\Desktop\Coding\c#-project\Kanban.Solution\Kanban\Views\ToDoLists\Index.cshtml"
 using Kanban.Models;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c6a41ee0ccb80084c8b87eaba9677dcaaffa01dc", @"/Views/ToDoLists/Index.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e4f7f928e61db042c3893e2f60280f9a262c5d52", @"/Views/_ViewImports.cshtml")]
     public class Views_ToDoLists_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Kanban.Models.ToDoList>>
     {
         #pragma warning disable 1998

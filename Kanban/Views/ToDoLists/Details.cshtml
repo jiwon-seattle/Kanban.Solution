@@ -6,11 +6,27 @@
 
 <div class="todolistDetails">
 
-  <h1><strong>To Do Details</strong></h1>
+  <h1><strong>Task Details</strong></h1>
+  
   <hr>
-  <h3>@Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(model => model.Name)</h3>
+  <h3>About Item @Html.DisplayFor(model => model.Name)</h3>
+  <p>Work Item Name: @Model.Name</p>
+  <p>Description: @Model.Content</p>
+  <p>Priority: @Model.Priority</p>
+  <p>Completed? 
+    @if (@Model.CheckCompletion == true)
+    {
+      <span class="checkmark">✔</span>
+    }
+    else 
+    {
+      <span class="wrongmark">✘</span>
+    }
+  </p>
+  <hr>
 
-  <p>@Html.ActionLink("Back to To Do List", "Index")</p>
   <p>@Html.ActionLink("Edit To Do", "Edit", new { id = Model.ToDoListId })</p>
   <p>@Html.ActionLink("Delete To Do", "Delete", new { id = Model.ToDoListId })</p>
 </div>
+
+  

@@ -1,28 +1,29 @@
+@model Kanban.Models.Project
+
 @{
   Layout = "_Layout";
 }
-
-@model Kanban.Models.Project
 
 <div class="projectCreate">
   <h1><strong>Add a new Project</strong></h1>
 
   @using (Html.BeginForm())
   {
-    @Html.Label("Project Name")
-    @Html.TextBoxFor(model => model.ProjectName)
+    <label asp-for="ProjectName" class="caption">Project Name</label>
+    <input asp-for="ProjectName" class="form-control">
 
-    @Html.Label("Description")
-    @Html.TextAreaFor(model => model.Content)
+    <label asp-for="Content">Description</label>
+    <textarea asp-for="Content" class="form-control"></textarea>
 
-    @Html.Label("Kick Off Date")
-    @Html.TextBoxFor(model => model.KickOffDate, new {@type="date"})
+    <label asp-for="KickOffDate">Kick Off Date</label>
+    <input asp-for="KickOffDate" type="date" class="form-control">
     
-    @Html.Label("Due Date")
-    @Html.TextBoxFor(model => model.DueDate, new {@type="date"})
-    <input type="submit" value="Add new product">
+    <label asp-for="DueDate">Due Date</label>
+    <input asp-for="DueDate" type="date" class="form-control">
 
-    @Html.Label("Is this Project Active?")
-    @Html.CheckBoxFor(model => model.ActiveStatus, true)
+    <label asp-for="ActiveStatus">Is this Project Active?</label>
+    <input asp-for="ActiveStatus" type="checkbox" value="true">
+    <br>
+    <input type="submit" value="Add new product" class="w3-button w3-green w3-round-large">
   }
 </div>
