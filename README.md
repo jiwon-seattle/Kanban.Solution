@@ -18,7 +18,8 @@
 
 Parking Lot/Improvement Opportunities:
 - Kanban Board and general UI/UX design 
-- Assining project to member isn't allow form-control In Member.cshtml.
+- form-control in member.cshtml
+- identity
 
 ## 2. Development
 ### Tech stack:
@@ -47,7 +48,7 @@ There are no known bug at this moment
 
 ## 4. Support and contact details
 
-Any feedbacks are appreciated! Please contact at email: jiwon1.han@gmail.com
+Any feedback is appreciated! Please contact at email: jiwon1.han@gmail.com
 
 ### License
 
