@@ -25,7 +25,8 @@
 
 Parking Lot/Improvement Opportunities:
 - Kanban Board and general UI/UX design 
-- Assining project to member isn't allow form-control In Member.cshtml.
+- form-control in member.cshtml
+- identity
 
 ## 2. Development
 ### Tech stack:
@@ -34,8 +35,8 @@ Parking Lot/Improvement Opportunities:
 
 ### To run dev mode locally:
 ```bash
-  $ git clone https://github.com/jiwon-seattle/DoctorOffice.Solution.git
-  $ cd DoctorOffice.Solution/DoctorOffice
+  $ git clone https://github.com/jiwon-seattle/Kanban.Solution.git
+  $ cd Kanban
   $ dotnet add package Microsoft.EntityFrameworkCore -v 2.2.0
   $ dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0
   $ dotnet build
@@ -44,7 +45,7 @@ Parking Lot/Improvement Opportunities:
   # After successfull pkg installtion
   $ dotnet run
 ```
-Now, it will automatically open http://localhost:5000 and show you the Doctor's Office main page.
+Now, it will automatically open http://localhost:5000 and show you the Kanban main page.
 
 You might encounter a MySql database related errors on initial loading since this application needs a specific data route to fetch data.
 
@@ -54,7 +55,7 @@ There are no known bug at this moment
 
 ## 4. Support and contact details
 
-Any feedbacks are appreciated! Please contact at email: jiwon1.han@gmail.com
+Any feedback is appreciated! Please contact at email: jiwon1.han@gmail.com
 
 ### License
 
