@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Kanban.csproj",
+  "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Kanban.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2961,127 +2961,127 @@
   "RootNamespace": "Kanban",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Projects\\Create.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Projects\\Create.cshtml",
       "TargetPath": "Views\\Projects\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\ToDoLists\\Create.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\ToDoLists\\Create.cshtml",
       "TargetPath": "Views\\ToDoLists\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Projects\\AssignPeople.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Projects\\AssignPeople.cshtml",
       "TargetPath": "Views\\Projects\\AssignPeople.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Managers\\Details.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Managers\\Details.cshtml",
       "TargetPath": "Views\\Managers\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\ToDoLists\\Edit.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\ToDoLists\\Edit.cshtml",
       "TargetPath": "Views\\ToDoLists\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Account\\Login.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Account\\Login.cshtml",
       "TargetPath": "Views\\Account\\Login.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Projects\\Index.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Projects\\Index.cshtml",
       "TargetPath": "Views\\Projects\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\ToDoLists\\Delete.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\ToDoLists\\Delete.cshtml",
       "TargetPath": "Views\\ToDoLists\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Shared\\Footer.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Shared\\Footer.cshtml",
       "TargetPath": "Views\\Shared\\Footer.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Shared\\Header.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Shared\\Header.cshtml",
       "TargetPath": "Views\\Shared\\Header.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Managers\\Index.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Managers\\Index.cshtml",
       "TargetPath": "Views\\Managers\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Managers\\Edit.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Managers\\Edit.cshtml",
       "TargetPath": "Views\\Managers\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Account\\Index.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Account\\Index.cshtml",
       "TargetPath": "Views\\Account\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Account\\Register.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Account\\Register.cshtml",
       "TargetPath": "Views\\Account\\Register.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Projects\\Delete.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Projects\\Delete.cshtml",
       "TargetPath": "Views\\Projects\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\ToDoLists\\Index.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\ToDoLists\\Index.cshtml",
       "TargetPath": "Views\\ToDoLists\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Managers\\Delete.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Managers\\Delete.cshtml",
       "TargetPath": "Views\\Managers\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Managers\\AddProject.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Managers\\AddProject.cshtml",
       "TargetPath": "Views\\Managers\\AddProject.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Shared\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\ToDoLists\\Details.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\ToDoLists\\Details.cshtml",
       "TargetPath": "Views\\ToDoLists\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Projects\\Edit.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Projects\\Edit.cshtml",
       "TargetPath": "Views\\Projects\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Shared\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Shared\\_ViewImports.cshtml",
       "TargetPath": "Views\\Shared\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Managers\\Create.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Managers\\Create.cshtml",
       "TargetPath": "Views\\Managers\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Projects\\Details.cshtml",
+      "FilePath": "c:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Views\\Projects\\Details.cshtml",
       "TargetPath": "Views\\Projects\\Details.cshtml",
       "FileKind": "mvc"
     }

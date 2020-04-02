@@ -48,7 +48,7 @@ namespace Kanban
 
       app.UseDeveloperExceptionPage();
 
-      app.UseIdentity();
+      app.UseAuthentication();
 
       app.UseMvc(routes =>
       {

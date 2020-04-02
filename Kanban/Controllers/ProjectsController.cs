@@ -47,7 +47,7 @@ namespace Kanban.Controllers
      _db.Projects.Add(project);
      
       _db.SaveChanges();
-      return RedirectToAction("Index");
+     return RedirectToAction("Index");
     }
 
     public ActionResult Details(int id)
