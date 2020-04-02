@@ -11,7 +11,7 @@ namespace Kanban.Models
     public DateTime RegisteredDate {get; set;}
     public string Position {get; set;} //desining positions
     public bool CurrentStatus {get; set;}
-    //public virtual ApplicationUser User {get; set;}
+    public virtual ApplicationUser User {get; set;}
     public ICollection<ProjectManager> Projects {get; set;}
     public Manager()
     {

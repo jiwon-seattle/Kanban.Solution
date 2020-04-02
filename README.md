@@ -12,7 +12,14 @@
 ---
 ## 1. User Flow
 
-1. Team decide use project management system that tracks each of team member's current status.
+1. Team members are able to learn what is kanban in the main page
+2. Team member is able to register a Kanban system and login and logout
+3. Team members are not able to see if they are not logged in to the system
+4. Team member is able to enter personal information into system with name, contact, registered date, position and current status
+5. Team memebers are able to enter a new project with details such as project name, description, kicoff date, due date, and active status
+6. Team members are able to assign status of project : Idea, ToDo, Doing or Done
+7. Team members are able to assign people to the project
+ 
 
 //To be continued..
 

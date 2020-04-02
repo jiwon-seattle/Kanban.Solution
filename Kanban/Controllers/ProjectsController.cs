@@ -12,20 +12,26 @@ using System;
 
 namespace Kanban.Controllers
 {
+  
+  [Authorize]
   public class ProjectsController : Controller
   {
     private readonly KanbanContext _db;
+    private readonly UserManager<ApplicationUser> _userManager;
 
-    public ProjectsController(KanbanContext db)
+    public ProjectsController(UserManager<ApplicationUser> userManager, KanbanContext db)
     {
+      _userManager = userManager;
       _db = db;
     }
 
-    public ActionResult Index()
+    public async Task<ActionResult> Index()
     {
-      List<Project> model = _db.Projects.ToList();
-      return View(model);
-    }
+      var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+      var currentUser = await _userManager.FindByIdAsync(userId);
+      var userProjects = _db.Projects.Where(entry => entry.User.Id == currentUser.Id);
+      return View(userProjects);
+    } 
     
     public ActionResult Create()
     {
@@ -33,9 +39,13 @@ namespace Kanban.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create(Project project)
+    public async Task<ActionResult> Create(Project project)
     {
-      _db.Projects.Add(project);
+      var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+      var currentUser = await _userManager.FindByIdAsync(userId);
+      project.User = currentUser;
+     _db.Projects.Add(project);
+     
       _db.SaveChanges();
       return RedirectToAction("Index");
     }

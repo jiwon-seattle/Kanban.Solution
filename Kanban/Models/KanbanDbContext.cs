@@ -1,10 +1,9 @@
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Kanban.Models
 {
-  public class KanbanContext : DbContext
+  public class KanbanContext : IdentityDbContext<ApplicationUser>
   {
     public virtual DbSet<Project> Projects { get; set; }
     public DbSet<Manager> Managers { get; set; }
@@ -15,7 +14,8 @@ namespace Kanban.Models
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-      modelBuilder.Entity<Status>().HasData(
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.Entity<Status>().HasData(
         new Status {StatusId = 1, StatusName = "Idea",},
         new Status {StatusId = 2, StatusName = "ToDo",},
         new Status {StatusId = 3, StatusName = "Doing",},

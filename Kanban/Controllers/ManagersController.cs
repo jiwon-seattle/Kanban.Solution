@@ -12,17 +12,23 @@ using System;
 
 namespace Kanban.Controllers
 {
+  [Authorize]
   public class ManagersController : Controller
   {
     private readonly KanbanContext _db;
-    public ManagersController(KanbanContext db)
+    private readonly UserManager<ApplicationUser> _userManager;
+    public ManagersController(UserManager<ApplicationUser> userManager, KanbanContext db)
     {
       _db = db;
+      _userManager = userManager;
     }
 
-    public ActionResult Index()
+    public async Task<ActionResult> Index()
     {
-      return View(_db.Managers.ToList());
+      var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+      var currentUser = await _userManager.FindByIdAsync(userId);
+      var userManagers = _db.Managers.Where(entry => entry.User.Id == currentUser.Id);
+      return View(userManagers);
     }
 
     public ActionResult Create()
@@ -32,15 +38,18 @@ namespace Kanban.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create(Manager manager, int ProjectId)
+    public async Task<ActionResult> Create(Manager manager, int ProjectId)
     {
-    _db.Managers.Add(manager);
-    if (ProjectId != 0)
-    {
-      _db.ProjectManagers.Add(new ProjectManager() { ProjectId = ProjectId, ManagerId = manager.ManagerId});
-    }
-    _db.SaveChanges();
-    return RedirectToAction("Index");
+      var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+      var currentUser = await _userManager.FindByIdAsync(userId);
+      manager.User = currentUser;
+      _db.Managers.Add(manager);
+      if (ProjectId != 0)
+      {
+        _db.ProjectManagers.Add(new ProjectManager() { ProjectId = ProjectId, ManagerId = manager.ManagerId});
+      }
+      _db.SaveChanges();
+      return RedirectToAction("Index");
     }
 
     public ActionResult Details(int id)

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jiwon Han\\Desktop\\Coding\\c#-project\\Kanban.Solution\\Kanban\\Kanban.csproj": {}
+    "C:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Kanban.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jiwon Han\\Desktop\\Coding\\c#-project\\Kanban.Solution\\Kanban\\Kanban.csproj": {
+    "C:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Kanban.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jiwon Han\\Desktop\\Coding\\c#-project\\Kanban.Solution\\Kanban\\Kanban.csproj",
+        "projectUniqueName": "C:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Kanban.csproj",
         "projectName": "Kanban",
-        "projectPath": "C:\\Users\\Jiwon Han\\Desktop\\Coding\\c#-project\\Kanban.Solution\\Kanban\\Kanban.csproj",
+        "projectPath": "C:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Kanban.csproj",
         "packagesPath": "C:\\Users\\Jiwon Han\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jiwon Han\\Desktop\\Coding\\c#-project\\Kanban.Solution\\Kanban\\obj\\",
+        "outputPath": "C:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

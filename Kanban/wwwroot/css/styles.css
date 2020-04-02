@@ -22,6 +22,12 @@
   text-align: center;
 }
 
+#headerLogIn
+{
+  left: 80%;
+  position: absolute;
+}
+
 body
 {
   margin: 50px;

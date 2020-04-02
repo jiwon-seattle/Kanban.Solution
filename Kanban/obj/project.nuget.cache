@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WV62XtwmqHw0rmb1rzDJPcQ87SmKrUK+QSYOT4HyqddI2DCcF0mi5A5Ay2GY3UyH+KDl/fZT1IE3ckWuyHe1Ew==",
+  "dgSpecHash": "afv8Ha/31B1oD8MRsoYSLiTmO80SLzzzGLC2PfzW0FDj+CWRz6vLnUFIlIN+bgmBi1HMYwrSs16FkkkDJLXilw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jiwon Han\\Desktop\\Coding\\c#-project\\Kanban.Solution\\Kanban\\Kanban.csproj",
+  "projectFilePath": "C:\\Users\\Jiwon Han\\Desktop\\coding\\c#-project\\Kanban.Solution\\Kanban\\Kanban.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore\\2.2.0\\microsoft.aspnetcore.2.2.0.nupkg.sha512",
