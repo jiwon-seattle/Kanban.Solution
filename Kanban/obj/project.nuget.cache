@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WV62XtwmqHw0rmb1rzDJPcQ87SmKrUK+QSYOT4HyqddI2DCcF0mi5A5Ay2GY3UyH+KDl/fZT1IE3ckWuyHe1Ew==",
+  "dgSpecHash": "7egZL8epKe3PsMdmI3lSNbU2rBxjG91D3J5eRy2djot7fPQExO49mWYhkIFL+zWIIu3yZNZjD5FilpVWGEJGhQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jiwon Han\\Desktop\\Coding\\c#-project\\Kanban.Solution\\Kanban\\Kanban.csproj",
+  "projectFilePath": "C:\\Users\\Jiwon Han\\Desktop\\Coding\\c#\\Kanban.Solution\\Kanban\\Kanban.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore\\2.2.0\\microsoft.aspnetcore.2.2.0.nupkg.sha512",
@@ -177,7 +177,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\Jiwon Han\\.nuget\\packages\\mysqlconnector\\0.49.2\\mysqlconnector.0.49.2.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\Jiwon Han\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "C:\\Users\\Jiwon Han\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\2.2.0\\pomelo.entityframeworkcore.mysql.2.2.0.nupkg.sha512",
     "C:\\Users\\Jiwon Han\\.nuget\\packages\\pomelo.jsonobject\\2.2.0\\pomelo.jsonobject.2.2.0.nupkg.sha512",
@@ -224,7 +224,7 @@
     "C:\\Users\\Jiwon Han\\.nuget\\packages\\system.globalization.calendars\\4.3.0\\system.globalization.calendars.4.3.0.nupkg.sha512",
     "C:\\Users\\Jiwon Han\\.nuget\\packages\\system.globalization.extensions\\4.3.0\\system.globalization.extensions.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.identitymodel.tokens.jwt\\5.3.0\\system.identitymodel.tokens.jwt.5.3.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.interactive.async\\3.2.0\\system.interactive.async.3.2.0.nupkg.sha512",
+    "C:\\Users\\Jiwon Han\\.nuget\\packages\\system.interactive.async\\3.2.0\\system.interactive.async.3.2.0.nupkg.sha512",
     "C:\\Users\\Jiwon Han\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
     "C:\\Users\\Jiwon Han\\.nuget\\packages\\system.io.compression\\4.3.0\\system.io.compression.4.3.0.nupkg.sha512",
     "C:\\Users\\Jiwon Han\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",

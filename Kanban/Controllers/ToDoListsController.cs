@@ -48,6 +48,8 @@ namespace Kanban.Controllers
     public ActionResult Details(int id)
     {
       ToDoList thisToDoList = _db.ToDoLists.FirstOrDefault(todolists => todolists.ToDoListId == id);
+      Status thisStatus = _db.Statuses.FirstOrDefault(status => status.StatusId == thisToDoList.StatusId);
+      ViewBag.StatusName = thisStatus.StatusName;
       return View(thisToDoList);
     }
 
