@@ -25,7 +25,8 @@ namespace Kanban.Controllers
     {
       List<ToDoList> model = _db.ToDoLists
       .Include(todolists => todolists.Project)
-      .Include( todolists => todolists.Status)
+      .Include(todolists => todolists.Status)
+      .Include(todolists => todolists.Manager)
       .ToList();
       return View(model);
     }
@@ -34,6 +35,7 @@ namespace Kanban.Controllers
     {
       ViewBag.ProjectId = new SelectList(_db.Projects, "ProjectId", "ProjectName");
       ViewBag.StatusId = new SelectList(_db.Statuses, "StatusId", "StatusName");
+      ViewBag.ManagerId = new SelectList(_db.Managers, "ManagerId", "Name");
       return View();
     }
 
@@ -49,7 +51,9 @@ namespace Kanban.Controllers
     {
       ToDoList thisToDoList = _db.ToDoLists.FirstOrDefault(todolists => todolists.ToDoListId == id);
       Status thisStatus = _db.Statuses.FirstOrDefault(status => status.StatusId == thisToDoList.StatusId);
+      Manager thisManager = _db.Managers.FirstOrDefault(manager => manager.ManagerId == thisToDoList.ManagerId);
       ViewBag.StatusName = thisStatus.StatusName;
+      ViewBag.Name = thisManager.Name;
       return View(thisToDoList);
     }
 
@@ -58,6 +62,7 @@ namespace Kanban.Controllers
       var thisToDoList = _db.ToDoLists.FirstOrDefault(todolists => todolists.ToDoListId == id);
       ViewBag.ProjectId = new SelectList(_db.Projects, "ProjectId", "ProjectName");
       ViewBag.StatusId = new SelectList(_db.Statuses, "StatusId", "StatusName");
+      ViewBag.ManagerId = new SelectList(_db.Managers, "ManagerId", "Name");
       return View(thisToDoList);
     }
 

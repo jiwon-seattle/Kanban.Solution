@@ -27,8 +27,8 @@
     <input asp-for="CheckCompletion" type="checkbox" value="false">
 
     <hr>
-    <label asp-for="ProjectId">Assign this work item to project</label>
-    <select asp-for="ProjectId" asp-items="ViewBag.ProjectId"></select>
+    <label asp-for="ManagerId">Assign this work item to a team memeber</label>
+    <select asp-for="ManagerId" asp-items="ViewBag.ManagerId"></select>
     <br>
     <input type="submit" value="Add new To Do" class="w3-button w3-green w3-round-large">
   }

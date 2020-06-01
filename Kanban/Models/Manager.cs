@@ -13,9 +13,12 @@ namespace Kanban.Models
     public bool CurrentStatus {get; set;}
     //public virtual ApplicationUser User {get; set;}
     public ICollection<ProjectManager> Projects {get; set;}
+    public virtual ICollection<ToDoList> ToDoLists {get; set;}
+
     public Manager()
     {
       this.Projects = new HashSet<ProjectManager> ();
+      this.ToDoLists = new HashSet<ToDoList>();
     }
   }
 }

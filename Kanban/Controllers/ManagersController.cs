@@ -46,6 +46,7 @@ namespace Kanban.Controllers
     public ActionResult Details(int id)
     {
       var thisManager = _db.Managers
+          .Include(manager => manager.ToDoLists)
           .Include(manager => manager.Projects)
           .ThenInclude(join => join.Project)
           .FirstOrDefault(manager => manager.ManagerId == id);
