@@ -10,6 +10,10 @@
 
   @using (Html.BeginForm())
   {
+    <input asp-for="ProjectId" value="@ViewBag.ProjectId" type="hidden" />
+    Console.WriteLine("-----------------------");
+    Console.WriteLine(ViewBag.ProjectId);
+
     <label asp-for="StatusId">Kanban Board</label>
     <select asp-for="StatusId" asp-items="ViewBag.StatusId" class="form-control"></select>
     
@@ -26,9 +30,12 @@
     </label>
     <input asp-for="CheckCompletion" type="checkbox" value="false">
 
+   // @Html.HiddenFor(m => m.ProjectId, new { Value = "ViewBag.ProjectId" })
+    
     <hr>
     <label asp-for="ManagerId">Assign this work item to a team memeber</label>
     <select asp-for="ManagerId" asp-items="ViewBag.ManagerId"></select>
+    Console.WriteLine(ViewBag.ManagerId);
     <br>
     <input type="submit" value="Add new To Do" class="w3-button w3-green w3-round-large">
   }

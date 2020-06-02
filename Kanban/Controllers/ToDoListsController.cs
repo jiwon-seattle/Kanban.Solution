@@ -26,14 +26,16 @@ namespace Kanban.Controllers
       List<ToDoList> model = _db.ToDoLists
       .Include(todolists => todolists.Project)
       .Include(todolists => todolists.Status)
-      .Include(todolists => todolists.ProjectManager)
+      .Include(todolists => todolists.Manager)
       .ToList();
       return View(model);
     }
 
-    public ActionResult Create()
+    public ActionResult Create(int ProjectId)
     {
-      ViewBag.ProjectId = new SelectList(_db.Projects, "ProjectId", "ProjectName");
+      Console.WriteLine("ProjectId is");
+      Console.WriteLine(ProjectId);
+      ViewBag.ProjectId = ProjectId;
       ViewBag.StatusId = new SelectList(_db.Statuses, "StatusId", "StatusName");
       ViewBag.ManagerId = new SelectList(_db.Managers, "ManagerId", "Name");
       return View();
@@ -44,7 +46,7 @@ namespace Kanban.Controllers
     {
       _db.ToDoLists.Add(todolist);
       _db.SaveChanges();
-      return RedirectToAction("Index");
+      return RedirectToAction("Index"); // set page to projectDetails
     }
 
     public ActionResult Details(int id)

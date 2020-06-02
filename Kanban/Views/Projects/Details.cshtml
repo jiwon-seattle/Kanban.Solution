@@ -12,6 +12,7 @@
   <h3>About Project @Html.DisplayFor(model => model.ProjectName)</h3>
   <p>Project Name: @Model.ProjectName</p>
   <p>Description: @Model.Content</p>
+  <p>Id is @Model.ProjectId</p>
   <p>Kikc Off Date: @Model.KickOffDate.Month/@Model.KickOffDate.Day/@Model.KickOffDate.Year</p>
   <p>Due Date: @Model.DueDate.Month/@Model.DueDate.Day/@Model.DueDate.Year</p>
   <p>Project Active : 
@@ -29,7 +30,7 @@
   @if(@Model.ToDoLists.Count == 0)
   {
     <h3>There are no To Do assigned yet.</h3>
-    @Html.ActionLink("Add Tasks", "Create", "ToDoLists")
+    @Html.ActionLink("Add Tasks", "Create", "ToDoLists", new { ProjectId = Model.ProjectId })
   }
   else
   {
@@ -38,13 +39,16 @@
     {
       <h3>@Html.ActionLink(@todoList.Name, "Details", "ToDoLists", new { @class = "linkStyle", id = todoList.ToDoListId })</h3>
     }
-    @Html.ActionLink("Add Tasks", "Create", "ToDoLists")
+    Console.WriteLine("Project Id is///// ");
+    Console.WriteLine(Model.ProjectId);
+    Console.WriteLine(Model.ProjectName);
+    @Html.ActionLink("Add Tasks", "Create", "ToDoLists", new { ProjectId = Model.ProjectId })
   }
   <hr>
   @if(Model.Managers.Count == 0)
   {
     <h3>There are no peole assinged on this product yet.</h3>
-    @Html.ActionLink("Assign people to this project", "AssignPeople", new { id = Model.ProjectId})
+    @Html.ActionLink("Assign people to this project", "AssignPeople", new { id = Model.ProjectId })
   }
   else
   {
