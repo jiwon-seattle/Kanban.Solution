@@ -60,8 +60,15 @@
   
   <p>@Html.ActionLink("Edit Product", "Edit", new { id = Model.ProjectId })</p>
   <p>@Html.ActionLink("Delete Product", "Delete", new { id = Model.ProjectId })</p>
+  <button id="button1" text="button">click!</button>
 </div>
 
 @* jquery *@
 <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
-<script></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#button1").click(function() {
+      alert("hellow world!")
+    })
+  })
+</script>

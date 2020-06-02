@@ -21,15 +21,17 @@
       
       if(project.ActiveStatus == true)
       {
-      <div class="activeProjects" style="border: 2px solid green">
-        <h2>Active Projects</h2>
+        //style="border: 2px solid green"
+      <div class="activeProjects" >
+        <p style="background-color: #1e90ff; color: white; text-align: center; padding: 2px; height: 30px">Active Project<p>
         <h3>@Html.ActionLink($"{project.ProjectName}", "Details", new {id = project.ProjectId })</h3>
       </div>
       }
       else
       {
+        <p style="background-color: #FA8072; color: white; text-align: center; padding: 2px; height: 30px">Inactive Projects</p>
         <div class="completedProjects">
-          <h2>Inactive Projects</h2>
+          
           <h3>@Html.ActionLink($"{project.ProjectName}", "Details", new {id = project.ProjectId })</h3>
         </div>
       }   

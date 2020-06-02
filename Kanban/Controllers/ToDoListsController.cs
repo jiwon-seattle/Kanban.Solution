@@ -26,7 +26,7 @@ namespace Kanban.Controllers
       List<ToDoList> model = _db.ToDoLists
       .Include(todolists => todolists.Project)
       .Include(todolists => todolists.Status)
-      .Include(todolists => todolists.Manager)
+      .Include(todolists => todolists.ProjectManager)
       .ToList();
       return View(model);
     }

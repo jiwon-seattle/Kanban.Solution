@@ -11,7 +11,7 @@ namespace Kanban.Models
     public int ManagerId {get; set;}
     public virtual Project Project {get; set;}
     public virtual Status Status {get; set;}
-    public virtual Manager Manager {get; set;}
+    public virtual ProjectManager ProjectManager {get; set;}
     public string Name {get; set;}
     public string Content {get; set;}
     public int Priority {get; set;}
