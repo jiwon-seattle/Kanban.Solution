@@ -83,7 +83,9 @@ namespace Kanban.Controllers
     {
 
       var thisProject = _db.Projects.FirstOrDefault(project => project.ProjectId == id);
-      ViewBag.ManagerId = new SelectList(_db.Managers, "ManagerId", "Name");
+      var a = _db.Managers.Where(x => x.CurrentStatus == true);
+
+      ViewBag.ManagerId = new SelectList(a, "ManagerId", "Name");
       return View(thisProject);
     }
 
